@@ -1,11 +1,16 @@
 const mongoose = require('mongoose');
-const {APP_CONFIG, APP_PORT, DB_NAME, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD} = process.env;
+require('dotenv').config();
+const {DB_NAME, DB_HOST, DB_PORT} = process.env;
 
 mongoose.connect(
     `mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`,
-    {useNewUrlParser: true, useUnifiedTopology: true},
-    (err) => {
-        if (!err) console.log("Mongodb connected");
-        else console.log("Connection error :" + err);
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false,
     }
+)
+    .then(() => console.log(`La base de données est connectée sur le port ${DB_PORT}...`))
+    .catch((err) => console.log("Erreur de connection à MongoDB", err)
 );

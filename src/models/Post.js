@@ -1,22 +1,35 @@
 const mongoose = require('mongoose');
 
-const Post = mongoose.model(
-    "projet_immo",
+const PostSchema = new mongoose.Schema(
     {
-        author: {
+        posterId: {
             type: String,
-            require: true
+            required: true
         },
         message: {
             type: String,
-            require: true
+            trim: true,
+            maxlength: 500,
         },
-        date: {
-            type: Date,
-            default: Date.now()
-        }
+        likers: {
+            type: [String],
+            required: true,
+        },
+        comments: {
+            type: [
+                {
+                    commenterId:String,
+                    commenterPseudo: String,
+                    text: String,
+                    timestamp: Number,
+                }
+            ],
+            required: true,
+        },
     },
-    "posts"
+    {
+        timestamps: true,
+    }
 );
 
-module.exports = {Post: Post};
+module.exports = mongoose.model('post', PostSchema);
