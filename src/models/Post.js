@@ -11,9 +11,8 @@ const PostSchema = new mongoose.Schema(
             trim: true,
             maxlength: 500,
         },
-        likers: {
-            type: [String],
-            required: true,
+        picture: {
+            type: String,
         },
         comments: {
             type: [

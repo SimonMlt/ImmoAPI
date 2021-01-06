@@ -1,6 +1,6 @@
 .env
+/src/public
 /node_modules
-/uploads
 .idea
 .DS_Store
 
