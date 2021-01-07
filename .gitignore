@@ -1,5 +1,5 @@
 .env
-/src/public
+/src/public/uploads
 /node_modules
 .idea
 .DS_Store
