@@ -4,6 +4,7 @@ import Home from "../../views/Home";
 import Profil from "../../views/Profil";
 import Habitation from "../../views/Habitation";
 import Navbar from "../Navbar";
+import CGI from "../../views/CGI";
 
 const Index = () => {
     return (
@@ -13,6 +14,7 @@ const Index = () => {
                 <Route path="/" exact component={Home}/>
                 <Route path="/profil" exact component={Profil}/>
                 <Route path="/habitations" exact component={Habitation}/>
+                <Route path="/cgi" exact component={CGI}/>
                 <Redirect to="/"/>
             </Switch>
         </Router>
