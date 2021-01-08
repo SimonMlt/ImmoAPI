@@ -3,11 +3,13 @@ import {useDispatch, useSelector} from "react-redux";
 import {dateParser} from "../Utils";
 import {updatePost} from "../../actions/post";
 import DeleteCard from "./DeleteCard";
+import CardComments from "./CardComments";
 
 
 const Card = ({post}) => {
     const [isUpdated, setIsUpdated] = useState(false);
     const [textUpdate, setTextUpdate] = useState(null);
+    const [showComments, setShowComments] = useState(false);
     const userData = useSelector((state) => state.userReducer);
     const dispatch = useDispatch();
 
@@ -56,6 +58,19 @@ const Card = ({post}) => {
                         <DeleteCard id={post._id} />
                     </div>
                 )}
+                <div className="card-footer">
+                    <div className="comment-icon">
+                        <img
+                            onClick={() => setShowComments(!showComments)}
+                            src="./img/icons/message1.svg"
+                            alt="comment"
+                        />
+                        <span>{post.comments.length}</span>
+                    </div>
+                    {/*<LikeButton post={post} />*/}
+                    {/*<img src="./img/icons/share.svg" alt="share" />*/}
+                </div>
+                {showComments && <CardComments post={post} />}
             </div>
         </li>
     );
