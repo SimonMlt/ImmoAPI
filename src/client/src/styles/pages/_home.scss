@@ -18,9 +18,31 @@
 
   .main {
     .home-header {
-      margin: 0 auto 12px;
+      width: 1100px;
+      margin: 0 auto 300px;
       text-align: center;
-      
+
+      .home-title {
+        margin-top: 10px;
+      }
+      .home-img {
+        width: 75%;
+        height: auto;
+        display: block;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .home-txt {
+        position: absolute;
+        right: 0;
+        left: 0;
+        padding: 1rem;
+        padding-right: 2rem;
+        text-align: center;
+      }
+
       .connection-form {
         background: $color-4;
         border-radius: 20px;
@@ -79,10 +101,10 @@
     @media screen and(max-width: 990px) {
       display: none;
     }
-  
+
     .right-side-container {
       position: fixed;
-    
+
     }
   }
 }

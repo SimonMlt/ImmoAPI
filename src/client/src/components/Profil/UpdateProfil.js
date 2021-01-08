@@ -9,7 +9,8 @@ const UpdateProfil = () => {
     return (
         <div className="profil-container">
             <LeftNav/>
-            <h1> Profil de {userData.pseudo}</h1>
+            <h1> Profil de {userData.pseudo}</h1><br/>
+            <h1>Email : {userData.email}</h1><br/>
         </div>
     );
 };

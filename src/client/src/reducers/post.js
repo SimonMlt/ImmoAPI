@@ -1,4 +1,4 @@
-import {DELETE_COMMENT, DELETE_POST, EDIT_COMMENT, GET_POSTS, UPDATE_POST} from "../actions/post";
+import {ADD_POST, DELETE_COMMENT, DELETE_POST, EDIT_COMMENT, GET_POSTS, UPDATE_POST} from "../actions/post";
 
 const initialState = {};
 

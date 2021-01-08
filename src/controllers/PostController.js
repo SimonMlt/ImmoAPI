@@ -16,8 +16,8 @@ module.exports.readPost = (req, res) => {
 
 module.exports.createPost = async (req, res) => {
     let fileName;
-
-    if (req.file !== null) {
+    console.log(req.file)
+    if (req.file) {
         try {
             if (
                 req.file.detectedMimeType != "image/jpg" &&
@@ -40,19 +40,20 @@ module.exports.createPost = async (req, res) => {
             )
         );
     }
-
     const newPost = new postModel({
         posterPseudo: req.body.posterPseudo,
         posterId: req.body.posterId,
         message: req.body.message,
-        picture: req.file !== null ? "./uploads/posts/" + fileName : "",
+        picture: req.file  ? "./uploads/posts/" + fileName : "",
         comments: [],
     });
-
+    console.log(newPost)
     try {
         const post = await newPost.save();
+        console.log(post)
         return res.status(201).json(post);
     } catch (err) {
+        console.log(err)
         return res.status(400).send(err);
     }
 };

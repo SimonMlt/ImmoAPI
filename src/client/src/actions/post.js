@@ -11,6 +11,7 @@ export const ADD_COMMENT = "ADD_COMMENT";
 export const EDIT_COMMENT = "EDIT_COMMENT";
 export const DELETE_COMMENT = "DELETE_COMMENT";
 
+
 export const getPosts = () => {
     return (dispatch) => {
         return axios
@@ -22,19 +23,14 @@ export const getPosts = () => {
     };
 };
 
-// export const addPost = (data) => {
-//     return (dispatch) => {
-//         return axios
-//             .post(`${process.env.REACT_APP_API_URL}api/post/`, data)
-//             .then((res) => {
-//                 if (res.data.errors) {
-//                     dispatch({ type: GET_POST_ERRORS, payload: res.data.errors });
-//                 } else {
-//                     dispatch({ type: GET_POST_ERRORS, payload: "" });
-//                 }
-//             });
-//     };
-// };
+export const addPost = (data) => {
+    return (dispatch) => {
+        return axios
+            .post(`${process.env.REACT_APP_HOST_API}api/post/`, data)
+            .then((res) => {
+            });
+    };
+};
 
 export const updatePost = (postId, message) => {
     return (dispatch) => {
