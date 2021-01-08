@@ -11,6 +11,6 @@ Une fois que ce dernier a trouvé l'appartement, la maison ou la villa de ses r�
 ## Axes d'amélioration
 
 Notre projet de l'AgenceJS peut-être améliorer, et nous vous proposons les améliorations suivantes :
-<ol>Amélioration du système de réservation</ol>
+<ol>Système de réservation à faire</ol>
 <ol>Vérification de l'âge de l'utilisateur lors de son inscription</ol>
 <ol>Création page contact</ol>
