@@ -300,6 +300,9 @@
       .comment-header {
         display: flex;
         justify-content: space-between;
+        span{
+          margin-left: 500px;
+        }
 
         @media screen and(max-width: 440px) {
           flex-direction: column;
