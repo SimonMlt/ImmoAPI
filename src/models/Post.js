@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 
 const PostSchema = new mongoose.Schema(
     {
+        posterPseudo: {
+            type: String,
+            required: true,
+        },
         posterId: {
             type: String,
             required: true

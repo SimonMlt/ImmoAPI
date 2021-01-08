@@ -25,6 +25,45 @@
   }
 
   .card-left {
+    .pseudo {
+      display: flex;
+
+      @media screen and(max-width: 590px) {
+        margin-left: 52px;
+      }
+      @media screen and(max-width: 440px) {
+        transform: translateY(-18px);
+      }
+
+      span {
+        transform: translate(0px, -5px);
+
+        @media screen and(max-width: 440px) {
+          margin: 0px 0 -10px;
+          padding: 0;
+        }
+
+        img {
+          padding: 5px;
+          cursor: pointer;
+          transition: 0.15s;
+          box-shadow: none;
+          height: 28px;
+          width: 28px;
+
+          &:hover {
+            transform: scale(1.2) translate(0px, 0px);
+          }
+        }
+
+        .fas {
+          color: $color-1;
+        }
+        .far {
+          color: $color-2;
+        }
+      }
+    }
     img {
       height: 52px;
       width: 52px;
@@ -49,6 +88,31 @@
     @media screen and(max-width: 590px) {
       margin-left: 18px;
     }
+    .postimage{
+      margin-left: 20px;
+      width: 800px;
+    }
+    @media screen and(max-width: 990px) {
+      .postimage{
+        margin-left: 20px;
+        width: 90%;
+      }
+      .card-header{
+        span{
+          margin-left: 300px!important;
+        }
+      }
+    }
+
+    @media screen and(max-width: 440px) {
+      img{
+        margin-left: 20px;
+        width: 90%;
+      }
+    }
+    p{
+      margin-left: 30px!important;
+    }
     .card-header {
       display: flex;
       justify-content: space-between;
@@ -62,6 +126,9 @@
         flex-direction: column;
       }
 
+      span{
+        margin-left: 600px;
+      }
       .pseudo {
         display: flex;
 
@@ -76,11 +143,12 @@
           transform: translate(0px, -5px);
 
           @media screen and(max-width: 440px) {
-            margin: 0px 0 -10px;
+            margin: 0 0 -10px;
             padding: 0;
           }
 
           img {
+            margin-left: 30px;
             padding: 5px;
             cursor: pointer;
             transition: 0.15s;
@@ -112,7 +180,7 @@
       }
     }
     p {
-      margin: 3px 0 9px;
+      margin: 0 15px 9px;
       font-size: 1.1rem;
 
       @media screen and(max-width: 440px) {
